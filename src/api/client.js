@@ -18,7 +18,7 @@ const request = async (method, path, body = null) => {
   });
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
-    throw { status: res.status, detail: err.detail || "Request failed" };
+    throw { status: res.status, message: err.message || err.detail || "Request failed" };
   }
   if (res.status === 204) return null;
   return res.json();

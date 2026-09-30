@@ -18,7 +18,8 @@ export default function App() {
         <Navbar />
         <CartDrawer />
         <Routes>
-          <Route path="/"                    element={<Home />} />
+          <Route path="/"                     element={<Home />} />
+          <Route path="/collection"           element={<Collection />} />
           <Route path="/collection/:category" element={<Collection />} />
           <Route path="/product/:id"          element={<Product />} />
           <Route path="/search"               element={<SearchPage />} />
